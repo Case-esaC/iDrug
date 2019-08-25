@@ -9,15 +9,28 @@ We provide an example script to run experiments on our dataset:
 
 
 ### Code and data
-- `iDrug.m`: the optimization algorith to solve iDrug framework.
-- `main.m`: demo code of running `iDrug.m` for drug repositioning.
+
+#### Raw data
+- `Drug-Disease Interactions`: the drug-disease interactions in form of `(DrugBankID, OMIMID)` was downloaded from CTD database (https://ctdbase.org/downloads/;jsessionid=0CF3C56EC170EF21331BFCDFA5E230C0).
+- `Drug-Target Interactions`: the drug-target interactions in form of `(DrugBankID, UniprotID)` was downloaded from DrugBank database (https://www.drugbank.ca/releases/latest).
+- `DiseaseName`: the disease name with `OMIMID` in the drug-disease domain.
+- `DrugDomain1`: the drug name with `DrugBankID` in the drug-disease domain.
+- `DrugDomain2`: the drug name with `DrugBankID` in the drug-target domain.
+- `Target`: the target name with `UniprotID` in the drug-target domain.
+
+#### Data in matlab form
+- `DrugDisease.mat`: the drug-disease interactions.
+- `DrugTarget.mat`: the drug-target interactions.
+- `DrugSimMat1.mat`: the drug-drug similarity in drug-disease domain.
+- `DrugSimMat2.mat`: the drug-drug similarity in drug-target domain.
+- `DiseaseSimMat.mat`: the disease-disease similarity.
+- `TargetSimMat.mat`: the target-target similarity.
+- `SMat.mat`: the mapping matrix to denote the anchor links across the two domains.
+
+#### code
+- `iDrug`: the optimization algorithm for iDrug framework.
+- `main.m`: demo code of running `iDrug.m`.
 - `auc.m`: evaluation script for AUPR measurement.
-
-
-- `run_DCA.m`: example code of running `DCA.m` for feature learning
-- `run_DTINet.m`: example code of running `DTINet.m` for drug-target prediction
-- `train_mf.mexa64`: pre-built binary file of inductive matrix completion algorithm (downloaded from [here](http://bigdata.ices.utexas.edu/software/inductive-matrix-completion/))
-- `download_imc.sh`: download the inductive matrix completion source and build the executable library from source.
 
 
 ### Contacts
