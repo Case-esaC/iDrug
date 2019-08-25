@@ -27,7 +27,7 @@ We provide an example script to run experiments on our dataset:
 - `TargetSimMat.mat`: the target-target similarity.
 - `SMat.mat`: the mapping matrix to denote the anchor links across the two domains.
 
-#### code
+#### Code
 - `iDrug`: the optimization algorithm for iDrug framework.
 - `main.m`: demo code of running `iDrug.m`.
 - `auc.m`: evaluation script for AUPR measurement.
