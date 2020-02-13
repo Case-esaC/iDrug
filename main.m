@@ -23,12 +23,13 @@ S = SMat; % mapping matrix for two domain.
 
 rank1 = 90;
 rank2 = 70;
-w = 1;
+w = 0.3;
 yy = X{1};
 nfolds = 5;
 positiveId = find(X{1});
 crossval_id = crossvalind('Kfold',positiveId(:),nfolds);
 AUPR = zeros(nfolds,1);
+AUC = zeros(nfolds, 1);
 
 for fold = 1:nfolds
     X{1} = yy;
@@ -50,15 +51,17 @@ for fold = 1:nfolds
     predX = U{1} * V{1}';
     testScore = [yy(PtestID); yy(NtestID)];
     pred = [predX(PtestID); predX(NtestID)];
-    [~, aupr] = auc(testScore(:), pred(:), 1e-6);
-    fprintf('The AUPR score of  %d - FOLD:  %d  with running time %f \n', fold, aupr, time);
+    [auc1, aupr] = auc(testScore(:), pred(:), 1e-6);
+    fprintf('%d-Fold: the AUPR score  %d, the AUC score:  %d, running time %f \n', fold, aupr, auc1, time);
     AUPR(fold,1) = aupr;
+    AUC(fold, 1) = auc1;
 
 end
 
 
 auprs = mean(AUPR);
-fprintf('The averaqge of AUPR score: %d \n',  auprs);
+aucs = mean(AUC);
+fprintf('The averaqge of AUPR and AUC score: %d,  %d \n',  auprs, aucs);
 
 figure(1)
 % check the convergence
