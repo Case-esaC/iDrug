@@ -30,8 +30,9 @@ We provide an example script to run experiments on our dataset:
 #### Data Visulization
 - the histogram of similarity scores in drug-disease domain.
 <img src="S1Fig.tif" width="600">
+
 - the histogram of similarity scores in drug- domain.
-<img src="S1Fig.tif" width="600">
+<img src="S2Fig.tif" width="600">
 
 #### Code
 - `iDrug`: the optimization algorithm for iDrug framework.
