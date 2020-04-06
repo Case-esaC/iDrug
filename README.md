@@ -27,6 +27,12 @@ We provide an example script to run experiments on our dataset:
 - `TargetSimMat.mat`: the target-target similarity.
 - `SMat.mat`: the mapping matrix to denote the anchor links across the two domains.
 
+#### Data Visulization
+- the histogram of similarity scores in drug-disease domain.
+<img src="S1Fig.tif" width="600">
+- the histogram of similarity scores in drug- domain.
+<img src="S1Fig.tif" width="600">
+
 #### Code
 - `iDrug`: the optimization algorithm for iDrug framework.
 - `main.m`: demo code of running `iDrug.m`.
