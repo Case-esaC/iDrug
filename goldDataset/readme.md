@@ -14,4 +14,4 @@
 - `validTop20gold.csv`: the top-20 predicted results by our iDrug with validation
 
 ### Quick start
-The code can be implemented as previous.
+The code can be implemented by changing the data directory pathway as previous.
