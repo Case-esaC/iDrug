@@ -1,10 +1,7 @@
 ## iDrug: Integration of drug repositioning and drug-target prediction via cross-network embedding
 iDrug is a computational pipeline to jointly predict novel drug-disease and drug-target interactions from heterogeneous network. iDrug adpot cross-network embedding to learn  low-dimensional feature space for drugs, targets, and diseases in the heterogeneous network.
 
-### Quick start
-We provide an example script to run experiments on our dataset: 
 
-- Run `main.m`: predict drug-disease interactions, and evaluate the results with cross-validation. 
 
 
 
@@ -27,7 +24,7 @@ We provide an example script to run experiments on our dataset:
 - `TargetSimMat.mat`: the target-target similarity.
 - `SMat.mat`: the mapping matrix to denote the anchor links across the two domains.
 
-#### Data Visulization
+#### Data visulization
 - the histogram of similarity scores in drug-disease domain.
 <img src="S1Fig.tif" width="600">
 
@@ -41,6 +38,11 @@ We provide an example script to run experiments on our dataset:
 
 #### Requirement
 - The code is tested under `MATLAB2015b`.
+
+#### Quick start
+We provide an example script to run experiments on our dataset: 
+
+- Run `main.m`: predict drug-disease interactions, and evaluate the results with cross-validation. 
 
 ### Contacts
 If you have any questions or comments, please feel free to email Huiyuan Chen (hxc501[at]case[dot]com).
