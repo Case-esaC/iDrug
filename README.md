@@ -31,7 +31,7 @@ We provide an example script to run experiments on our dataset:
 - the histogram of similarity scores in drug-disease domain.
 <img src="S1Fig.tif" width="600">
 
-- the histogram of similarity scores in drug- domain.
+- the histogram of similarity scores in drug-target domain.
 <img src="S2Fig.tif" width="600">
 
 #### Code
