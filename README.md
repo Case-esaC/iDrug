@@ -32,6 +32,8 @@ We provide an example script to run experiments on our dataset:
 - `main.m`: demo code of running `iDrug.m`.
 - `auc.m`: evaluation script for AUPR measurement.
 
+#### Requirement
+- The code is tested under `MATLAB2015b`.
 
 ### Contacts
 If you have any questions or comments, please feel free to email Huiyuan Chen (hxc501[at]case[dot]com).
