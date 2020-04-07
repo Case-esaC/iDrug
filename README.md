@@ -46,9 +46,9 @@ We provide an example script to run experiments on our dataset:
 - Run `main.m`: predict drug-disease interactions, and evaluate the results with cross-validation. 
 
 ```
-matlab main(rank1, rank2, w, alpha, neta, gamma)
+matlab main(rank1, rank2, w, alpha, beta, gamma)
 ```
-where (rank1, rank2, w, alpha, neta, gamma) are the parameters as described in the paper. The results are shown as
+where (rank1, rank2, w, alpha, beta, gamma) are the parameters as described in the paper. The results are shown as
 
 <img src="res.jpg" width="800">
 
