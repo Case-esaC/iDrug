@@ -34,6 +34,7 @@ iDrug is a computational pipeline to jointly predict novel drug-disease and drug
 #### Code
 - `iDrug`: the optimization algorithm for iDrug framework.
 - `main.m`: demo code of running `iDrug.m`.
+- `train_test_split.m`: split the data into training and test set.
 - `auc.m`: evaluation script for AUPR measurement.
 
 #### Requirement
@@ -43,6 +44,13 @@ iDrug is a computational pipeline to jointly predict novel drug-disease and drug
 We provide an example script to run experiments on our dataset: 
 
 - Run `main.m`: predict drug-disease interactions, and evaluate the results with cross-validation. 
+
+```
+matlab main(rank1, rank2, w, alpha, neta, gamma)
+```
+where (rank1, rank2, w, alpha, neta, gamma) are the parameters as described in the paper. The results are shown as
+
+<img src="res.jpg" width="800">
 
 ### Contacts
 If you have any questions or comments, please feel free to email Huiyuan Chen (hxc501[at]case[dot]com).
