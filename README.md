@@ -35,7 +35,7 @@ iDrug is a computational pipeline to jointly predict novel drug-disease and drug
 - `iDrug`: the optimization algorithm for iDrug framework.
 - `main.m`: demo code of running `iDrug.m`.
 - `train_test_split.m`: split the data into training and test set.
-- `auc.m`: evaluation script for AUPR measurement.
+- `auc.m`: evaluation script for AUROC and AUPR measurement.
 
 #### Requirement
 - The code is tested under `MATLAB2015b`.
