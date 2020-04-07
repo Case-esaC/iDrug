@@ -1,4 +1,4 @@
-function main(rank1, rank2, w, alpha, neta, gamma)
+function main(rank1, rank2, w, alpha, beta, gamma)
 
     if nargin < 6
         gamma = 0.01;
