@@ -26,10 +26,10 @@ iDrug is a computational pipeline to jointly predict novel drug-disease and drug
 
 #### Data visulization
 - the histogram of similarity scores in drug-disease domain.
-<img src="S1Fig.tif" width="600">
+<img src="S1Fig.png" width="600">
 
 - the histogram of similarity scores in drug-target domain.
-<img src="S2Fig.tif" width="600">
+<img src="S2Fig.png" width="600">
 
 #### Code
 - `iDrug`: the optimization algorithm for iDrug framework.
