@@ -8,34 +8,34 @@ iDrug is a computational pipeline to jointly predict novel drug-disease and drug
 ### Code and data
 
 #### Raw data
-- `Drug-Disease Interactions`: the drug-disease interactions in form of `(DrugBankID, OMIMID)` was downloaded from CTD database (https://ctdbase.org/downloads/;jsessionid=0CF3C56EC170EF21331BFCDFA5E230C0).
-- `Drug-Target Interactions`: the drug-target interactions in form of `(DrugBankID, UniprotID)` was downloaded from DrugBank database (https://www.drugbank.ca/releases/latest).
-- `DiseaseName`: the disease name with `OMIMID` in the drug-disease domain.
-- `DrugDomain1`: the drug name with `DrugBankID` in the drug-disease domain.
-- `DrugDomain2`: the drug name with `DrugBankID` in the drug-target domain.
-- `Target`: the target name with `UniprotID` in the drug-target domain.
+- `Drug-Disease Interactions`: the drug-disease interactions in form of `(DrugBankID, OMIMID)` were downloaded from CTD database (https://ctdbase.org/downloads/;jsessionid=0CF3C56EC170EF21331BFCDFA5E230C0).
+- `Drug-Target Interactions`: the drug-target interactions in form of `(DrugBankID, UniprotID)` were downloaded from DrugBank database (https://www.drugbank.ca/releases/latest).
+- `DiseaseName`: disease names with their `OMIMID` in the drug-disease domain.
+- `DrugDomain1`: drug names with their `DrugBankID` in the drug-disease domain.
+- `DrugDomain2`: drug names with their `DrugBankID` in the drug-target domain.
+- `Target`:  target names with their `UniprotID` in the drug-target domain.
 
-#### Data in matlab form
-- `DrugDisease.mat`: the drug-disease interactions.
-- `DrugTarget.mat`: the drug-target interactions.
-- `DrugSimMat1.mat`: the drug-drug similarity in drug-disease domain.
-- `DrugSimMat2.mat`: the drug-drug similarity in drug-target domain.
-- `DiseaseSimMat.mat`: the disease-disease similarity.
-- `TargetSimMat.mat`: the target-target similarity.
+#### Data in MatLab form
+- `DrugDisease.mat`: drug-disease interactions.
+- `DrugTarget.mat`: drug-target interactions.
+- `DrugSimMat1.mat`: drug-drug similarities in drug-disease domain.
+- `DrugSimMat2.mat`: drug-drug similarities in drug-target domain.
+- `DiseaseSimMat.mat`: disease-disease similarities.
+- `TargetSimMat.mat`: target-target similarities.
 - `SMat.mat`: the mapping matrix to denote the anchor links across the two domains.
 
 #### Data visulization
-- the histogram of similarity scores in drug-disease domain.
+- the histogram of similarity scores in the drug-disease domain.
 <img src="S1Fig.png" width="600">
 
-- the histogram of similarity scores in drug-target domain.
+- the histogram of similarity scores in the drug-target domain.
 <img src="S2Fig.png" width="600">
 
 #### Code
 - `iDrug`: the optimization algorithm for iDrug framework.
-- `main.m`: demo code of running `iDrug.m`.
-- `train_test_split.m`: split the data into training and test set.
-- `auc.m`: evaluation script for AUROC and AUPR measurement.
+- `main.m`: demo code for running `iDrug.m`.
+- `train_test_split.m`: split the data into training and testing sets.
+- `auc.m`: evaluation script for AUROC and AUPR measurements.
 
 #### Requirement
 - The code is tested under `MATLAB2015b`.
