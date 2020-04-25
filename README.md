@@ -1,5 +1,5 @@
 ## iDrug: Integration of drug repositioning and drug-target prediction via cross-network embedding
-iDrug is a computational pipeline to jointly predict novel drug-disease and drug-target interactions based on a heterogeneous network. iDrug adpots cross-network embedding to learn lower dimensional feature spaces for drugs, targets, and diseases in the heterogeneous network.
+iDrug is a computational pipeline to jointly predict novel drug-disease and drug-target interactions based on a heterogeneous network. iDrug adpots cross-network embedding to learn lower dimensional feature spaces for drugs, targets, and diseases in the heterogeneous network. A paper describing the approach is currently under review. A link to the paper will be added once it is published. 
 
 
 
