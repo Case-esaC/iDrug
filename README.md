@@ -52,5 +52,9 @@ where (rank1, rank2, w, alpha, beta, gamma) are the parameters as described in t
 
 <img src="res.jpg" width="800">
 
+### Baselines:
+- RLS-Kron: http://cs.ru.nl/~tvanlaarhoven/drugtarget2011/
+- MBiRW: https://github.com//bioinfomaticsCSU/MBiRW
+
 ### Contacts
 If you have any questions or comments, please feel free to email Huiyuan Chen (hxc501[at]case[dot]com).
