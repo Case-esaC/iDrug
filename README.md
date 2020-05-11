@@ -41,14 +41,14 @@ iDrug is a computational pipeline to jointly predict novel drug-disease and drug
 - The code is tested under `MATLAB2015b`.
 
 #### Quick start
-We provide an example script to run experiments on our dataset: 
+We provide an example script to run experiments on our datasets: 
 
-- Run `main.m`: predict drug-disease interactions, and evaluate the results with cross-validation. 
+- Run `main.m`: predict drug-disease interactions, and evaluate the results using five-fold cross-validation. 
 
 ```
 matlab main(rank1, rank2, w, alpha, beta, gamma)
 ```
-where (rank1, rank2, w, alpha, beta, gamma) are the parameters as described in the paper. The results are shown as
+where rank1 and rank2 are the ranks of the latent matrices, w is the cost associated with the unobserved samples, and (alpha, beta, gamma) represent the contributions of within-domain smoothness, cross-network consistency, and the sparseness of solutions, respectively. The detail explanation of these parameters and sensitivity analysis can be found in the paper. In our experiments, the values of these parameters are: rank1 = 90, rank2 = 70, w = 0.3, alpha=beta=gamma= 0.001. The results using these parameters are shown here:
 
 <img src="res.jpg" width="800">
 
