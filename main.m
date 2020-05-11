@@ -1,4 +1,13 @@
-function main(rank1, rank2, w, alpha, beta, gamma)
+function main(rank1, rank2, w, alpha, beta, gamma, DorT, scenario)
+
+    if nargin < 8
+        scenario = '1';
+    end
+
+    if nargin < 7
+        DorT = '1';
+    end
+
 
     if nargin < 6
         gamma = 0.01;
@@ -36,6 +45,17 @@ load TargetSimMat;
 X = {}; % contain binary interaction of drug-disease and drug-target
 Au = {};
 Av = {};
+
+if DorT == '1'
+    X{2} = DrugDisease;
+    X{1} = DrugTarget;
+    Au{2} = DrugSimMat1;
+    Au{1} = DrugSimMat2;
+    Av{2} = DiseaseSimMat;
+    Av{1} = TargetSimMat;
+    S = SMat';
+end
+
 
 X{1} = DrugDisease;
 X{2} = DrugTarget;
