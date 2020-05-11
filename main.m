@@ -46,7 +46,7 @@ X = {}; % contain binary interaction of drug-disease and drug-target
 Au = {};
 Av = {};
 
-if DorT == '1'
+if DorT == '2'
     X{2} = DrugDisease;
     X{1} = DrugTarget;
     Au{2} = DrugSimMat1;
