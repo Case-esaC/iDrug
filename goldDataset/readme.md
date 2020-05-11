@@ -1,17 +1,17 @@
-### Gold dataset as case study
+### Gold standard dataset
 - The drug-disease dataset can be obtained from the reference : "Gottlieb, Assaf, et al. "PREDICT: a method for inferring novel drug indications with application to personalized medicine." Molecular systems biology 7.1 (2011)".t 
 - The drug-target dataset can be downloaded from the DrugBank: https://www.drugbank.ca/
 
-### Data describution
-- `DrugDisease`: the drug-disease interactions.
-- `DrugTarget`: the drug-target interactions.
-- `DrugSimMat1`: the drug-drug similarity in drug-disease domain.
-- `DrugSimMat2`: the drug-drug similarity in drug-target domain.
-- `DiseaseSimMat`: the disease-disease similarity.
-- `TargetSimMat`: the target-target similarity.
+### Data in MatLab format
+- `DrugDisease.mat`: the drug-disease interactions.
+- `DrugTarget.mat`: the drug-target interactions.
+- `DrugSimMat1.mat`: the drug-drug similarity in drug-disease domain.
+- `DrugSimMat2.mat`: the drug-drug similarity in drug-target domain.
+- `DiseaseSimMat.mat`: the disease-disease similarity.
+- `TargetSimMat.mat`: the target-target similarity.
 - `SMat.mat`: the mapping matrix to denote the anchor links across the two domains.
 
 - `validTop20gold.csv`: the top-20 predicted results by our iDrug with validation
 
 ### Quick start
-The code can be implemented by changing the data directory pathway as previous.
+To run on this dataset, users just need to switch to this directory.
