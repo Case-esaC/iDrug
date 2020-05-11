@@ -71,7 +71,7 @@ nfolds = 5;
 para = [alpha, beta, gamma];
 
 
-[positiveId, crossval_id] = train_test_split(X{1}, nfolds);
+[positiveId, crossval_id] = train_test_split(X{1}, nfolds, scenario);
 AUPR = zeros(nfolds,1);
 AUC = zeros(nfolds, 1);
 
