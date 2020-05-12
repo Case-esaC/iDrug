@@ -26,11 +26,11 @@ function main(rank1, rank2, w, alpha, beta, gamma, DorT, scenario)
     end
 
     if nargin < 2
-        rank1 = 90;
+        rank2 = 90;
     end
 
     if nargin < 1
-        rank2 = 70;
+        rank1 = 70;
     end
 
 load DiseaseSimMat;
@@ -56,14 +56,14 @@ if DorT == '2'
     S = SMat';
 end
 
-
-X{1} = DrugDisease;
-X{2} = DrugTarget;
-Au{1} = DrugSimMat1;
-Au{2} = DrugSimMat2;
-Av{1} = DiseaseSimMat;
-Av{2} = TargetSimMat;
-S = SMat; % mapping matrix for two domain.
+if DorT == '1'
+    X{1} = DrugDisease;
+    X{2} = DrugTarget;
+    Au{1} = DrugSimMat1;
+    Au{2} = DrugSimMat2;
+    Av{1} = DiseaseSimMat;
+    Av{2} = TargetSimMat;
+    S = SMat; % mapping matrix for two domain.
 
 
 yy = X{1};
