@@ -103,8 +103,8 @@ end
 for i = 1:2
     [row1, ~] = size(Au{i});
     [row2, ~] = size(Av{i});
-    Lu{i} = Au{i} - spdiags(sum(Au{i},2),0,row1,row1);
-    Lv{i} = Av{i} - spdiags(sum(Av{i},2),0,row2,row2);
+    Lu{i} = -Au{i} + spdiags(sum(Au{i},2),0,row1,row1);
+    Lv{i} = -Av{i} + spdiags(sum(Av{i},2),0,row2,row2);
 end
 
 
