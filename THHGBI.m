@@ -3,7 +3,7 @@ function [DrugTarget, DrugDisease] = THHGBI(DrugTarget, TargetSim, DrugSim, Dise
 
 % The drug must be overlap between two domains.
  if nargin < 8
-        iter = 10;
+        iter = 20;
     end
     if nargin < 7
         filter = 0.2;
