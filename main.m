@@ -64,6 +64,7 @@ if DorT == '1'
     Av{1} = DiseaseSimMat;
     Av{2} = TargetSimMat;
     S = SMat; % mapping matrix for two domain.
+end
 
 
 yy = X{1};
