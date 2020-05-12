@@ -64,6 +64,8 @@ Users just need to construct their data in Matlab format using the same name as 
 ### Links to some baselines:
 - RLS-Kron: http://cs.ru.nl/~tvanlaarhoven/drugtarget2011/
 - MBiRW: https://github.com//bioinfomaticsCSU/MBiRW
+- GRMF: `GRMF.m`
+- TH_HGBI: `TH_HGBI`
 
 ### Contacts
 If you have any questions or comments, please feel free to email Huiyuan Chen (hxc501[at]case[dot]com).
