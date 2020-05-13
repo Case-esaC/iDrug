@@ -1,4 +1,8 @@
-function main(rank1, rank2, w, alpha, beta, gamma, DorT, scenario)
+function main(rank1, rank2, w, alpha, beta, gamma, DorT, scenario, k)
+
+    if nargin < 9
+        k = 20;
+    end
 
     if nargin < 8
         scenario = '1';
@@ -78,32 +82,42 @@ AUC = zeros(nfolds, 1);
 
 for fold = 1:nfolds
     X{1} = yy;
-	PtrainID = positiveId(find(crossval_id~=fold));
-	PtestID  = positiveId(find(crossval_id==fold));
+    PtrainID = positiveId(find(crossval_id~=fold));
+    PtestID  = positiveId(find(crossval_id==fold));
 
     % sample equal amount of negative sample
     negativeID = find(X{1}==0);
-	num = numel(negativeID);
+    num = numel(negativeID);
     Nidx = randperm(num);
     NtestID = negativeID(Nidx(1:length(PtestID)));
 
     X{1}(PtestID) = 0; % mask out the test data
     
     %nid = find(X{1}==0);
-    %X{1}(nid) = mean(mean(X{1})); % initilzation for strategy 2 and 3 to
-    %avoild zero block
+    %X{1}(nid) = mean(mean(X{1}))+0.05; % initilzation for strategy 2 and 3 to avoild zero block
 
     tic
-	[U, V, objs] = iDrug(X, w, Au, Av, S, rank1, rank2, para);
+    [U, V, objs] = iDrug(X, w, Au, Av, S, rank1, rank2, para);
     time =toc;
     
     predX = U{1} * V{1}';
     testScore = [yy(PtestID); yy(NtestID)];
     pred = [predX(PtestID); predX(NtestID)];
     [auc1, aupr, rocx, rocy, prx, pry] = auc(testScore(:), pred(:), 1e-6);
+
+    if scenario == '2' || scenario == '3'
+        [B,I] = sort(pred,'descend');
+        prec = sum(testScore(I(1:k)) == 1) / min(k, sum(testScore == 1));
+        fprintf('precision %f \n',prec);
+    end
+
+
     fprintf('%d-Fold: the AUPR score  %d, the AUC score:  %d, running time %f \n', fold, aupr, auc1, time);
     AUPR(fold,1) = aupr;
     AUC(fold, 1) = auc1;
+
+    
+
 
 end
 
@@ -133,7 +147,6 @@ ylabel('Objective value');
 title('Convergence')
 
 end
-
 
 
 
