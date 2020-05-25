@@ -48,13 +48,13 @@ We provide an example script to run experiments on our datasets:
 ```
 matlab main(rank1, rank2, w, alpha, beta, gamma, DorT, scenario, k)
 ```
-Among the parameters, `rank1` and `rank2` are the ranks of the latent matrices, `w` is the cost associated with the unobserved samples, and `(alpha, beta, gamma)` represent the contributions of within-domain smoothness, cross-network consistency, and the sparseness of solutions, respectively. The detail explanation of these parameters and sensitivity analysis can be found in the paper. The parameter `DorT` indicates whether the experiments will be for Drug-Disease (`DorT = '1'`) or Drug-target (`DorT = '2'`) prediction.  The parameter `scenario` indicates the one of the three possible scenarios in the paper: pair prediction (`scenario='1'`), new drug (`scenario='2'`), or new disease (`scenario='3'`), and the `k` is the top-k performance. 
+Among the parameters, `rank1` and `rank2` are the ranks of the latent matrices, `w` is the cost associated with the unobserved samples, and `(alpha, beta, gamma)` represent the contributions of within-domain smoothness, cross-network consistency, and the sparseness of solutions, respectively. The detail explanation of these parameters and sensitivity analysis can be found in the paper. The parameter `DorT` indicates whether the experiments will be for Drug-Disease (`DorT = '1'`) or Drug-target (`DorT = '2'`) prediction.  The parameter `scenario` indicates the one of the three possible scenarios in the paper: pair prediction (`scenario='1'`), new drug (`scenario='2'`), or new disease (`scenario='3'`). For scenario 1, by varying the rank threshold, the algotirhn can calculate various true positive rate (TPR), false positive rate (FPR), Precision and Recall values. Area Under the Receiver Operating Characteristic curve (AUROC) and Area Under the Precision Recall curve (AUPR) will be generated. For senarios 2 and 3, the algorithm focuses on the performance of the top-k predictions, users need to set a value for the parameter `k`, and the algorithm output the precision calculated based on the  top-k predictions. Parameter `k` is not used for `scenario='1'`.
 
 To replicate drug-disease interaction prediction results using five-fold cross-validation in our paper, the values of these parameters are: `rank1 = 90`, `rank2 = 70`, `w = 0.3`, `alpha=beta=gamma= 0.001`, `DorT = '1'`, `scenario = '1'`. The results using these parameters are shown here:
 
 <img src="res.jpg" width="800">
 
-For scenarios 2 and 3: `matlab main(70, 70, 0.3, 0.01, 0.01, 0.01, 1, '2', 20)` ====> `precision: 0.23`
+To replicate the new drug and new disease prediction in the paper, users can call the `main` function using the following parameters: `matlab main(70, 70, 0.3, 0.01, 0.01, 0.01, 1, '2', 20)`. The output of the algorithm is the precision: `precision: 0.23`
 
 
 #### Gold Standard Data
